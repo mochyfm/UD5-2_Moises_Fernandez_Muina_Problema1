@@ -1,4 +1,4 @@
-# UD5-2_Moises_Fernandez_Muina_Problema1 (5 puntos)
+# Problema 1 (5 puntos)
 
 Enunciado del problema:
 
@@ -6,25 +6,26 @@ En este ejercicio tendrás que crear una clase denominada SuperList que extienda
 
 import java.util.ArrayList;
 
-public abstract class ListManager<T> {
+    public abstract class ListManager<T> {
 
-    ArrayList<T> list = new ArrayList<T>();
+        ArrayList<T> list = new ArrayList<T>();
 
-    public abstract void addElement(T element);
-    public abstract T removeElement(int position);
-    public abstract void showElements();
-    public abstract void showReversedElements();
+        public abstract void addElement(T element);
+        public abstract T removeElement(int position);
+        public abstract void showElements();
+        public abstract void showReversedElements();
 
-    @Override
-    public String toString() {
-        String output = "-> ";
+        @Override
+        public String toString() {
+            String output = "-> ";
 
-        for ( T value: list ) {
-            output += value.toString() + " | ";
+            for ( T value: list ) {
+                output += value.toString() + " | ";
+            }
+            return output;
         }
-        return output;
+        
     }
-}
 
 A la hora de implementar sus métodos abstractos debes lograr que estos tengan el siguiente comportamiento:
 
